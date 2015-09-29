@@ -1,4 +1,4 @@
-include_recipe 'service'
+include_recipe 'shellout-experimental::service'
 
 shellout_gem = 'mixlib-shellout-2.0.1-universal-mingw32.gem'
 source = File.join(ENV['TEMP'], shellout_gem)
