@@ -45,7 +45,7 @@ The `watchdog_timeout` defaults to 2 hours. You can change this setting in your 
 windows_service  ({:watchdog_timeout => 600}) # 10 minutes
 ```
 
-## timeout logging
+## Timeout logging
 The experimantal gem logs to a file `shellout.txt` in the temp directory of the node. Running under the chef-client service, this file would be located at `c:\windows\temp\shellout.txt`. The log includes entries for each shellout process created and each process forcibly killed at timeout.
 
 One fix the experimental gem includes is the ability to kill child processes so there should be an entry for each child process killed in the timeout. Some of these state that the process failed to be killed. This likely means that the process died before it could be killed. For example, if a chef run spawns cmd, ruby, and powershell, then killing powershell (likely started with a `powershell_script` resource) will cause a failure to be returned to ruby and it will then complete and exit before it is killed. 
