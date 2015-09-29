@@ -1,0 +1,7 @@
+name 'shellout-experimental'
+maintainer 'The Authors'
+maintainer_email 'you@example.com'
+license 'all_rights'
+description 'Installs/Configures shellout-experimental'
+long_description 'Installs/Configures shellout-experimental'
+version '0.1.0'
