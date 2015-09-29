@@ -1,6 +1,6 @@
 # shellout-experimental
 
-Cookbook for installing and reverting experimental mixlib-shellout Gem
+Cookbook for installing and reverting experimental mixlib-shellout Gem tracked via https://github.com/chef/mixlib-shellout/pull/110
 
 ## Supported environment
 This cookbook is intended to be run on the following environment:
