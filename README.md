@@ -30,7 +30,7 @@ knife winrm QUERY 'chef-client -o recipe[shellout-experimental]' -x vagrant -P v
 ## Restoring a node to the original gem
 To restore a node to the original gem run the restore recipe:
 ```
-knife winrm QUERY 'chef-client -o recipe[shellout-experimental::restore]' -x vagrant -P vagrant
+knife winrm QUERY 'chef-client -o recipe[shellout-experimental::restore]' -x USER -P PASSWORD
 ```
 
 ## What's different in this experimental gem?
