@@ -1,8 +1,13 @@
 include_recipe 'shellout-experimental::service'
 
 file File.join(ENV['TEMP'], 'mixlib-shellout-2.0.1-universal-mingw32.gem') do
-  notifies :remove, "chef_gem[mixlib-shellout]", :immediately
   action :delete
+end
+
+chef_gem 'removing mixlib-shellout' do
+  compile_time false
+  package_name 'mixlib-shellout'
+  action :remove
 end
 
 chef_gem 'mixlib-shellout' do
